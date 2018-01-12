@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Web Example(Visitor)</title>
+</head>
+
+<body>
+    <h1>Chat - Web Example(Visitor)</h1>
+    <form onSubmit='sock.send(document.getElementById("input").value); return false;'>
+    Input text: <input id="input" focus="true" />
+    <input type="submit" disabled="true" id="send" value="Send" />
+    </form>
+    <br/>
+    Messages from server:</br>
+    <textarea cols=80 rows=20 id="output">
+    </textarea>
+    <br/>
+    status: <span id="status">connecting...</span>
+</body>
+
+<!-- 引用jquery -->  
+<script type="text/javascript" src="js/sockjs-1.0.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"> </script>
+<script type="text/javascript" src="js/visitor.js"> </script>
+
+</html>
